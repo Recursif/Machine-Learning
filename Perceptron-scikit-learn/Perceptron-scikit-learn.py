@@ -17,7 +17,7 @@ X_test_std = sc.transform(X_test)
 
 #One-vs-Rest(OvR)
 from sklearn.linear_model import Perceptron
-ppn = Perceptron(n_iter=40, eta=0.1, random_state=0)
+ppn = Perceptron(n_iter=40, eta0=0.1, random_state=0)
 ppn.fit(X_train_std, y_train)
 
 y_pred = ppn.predict(X_test_std)

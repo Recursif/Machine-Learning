@@ -3,7 +3,7 @@ import numpy as np
 
 from matplotlib.colors import ListedColormap
 
-def plot_decision_regions(X, y, classifier, resolution=0.02):
+def plot_decision_regions(X, y, classifier, resolution=0.02, test_idx=range(105,150)):
 
     #setup marker
     markers = ('s', 'x', 'o','^', 'v')
@@ -27,4 +27,4 @@ def plot_decision_regions(X, y, classifier, resolution=0.02):
     #highlight test n_samples
     if test_idx:
         X_test, y_test = X[test_idx, :], y[test_idx]
-        plt.scatter(X_test[:, 0] X_test[:, 1], c='', alpha=1.0, linewidths=1, marker='o', s=55, label='test set')
+        plt.scatter(X_test[:, 0], X_test[:, 1], c='', alpha=1.0, linewidths=1, marker='o', s=55, label='test set')
